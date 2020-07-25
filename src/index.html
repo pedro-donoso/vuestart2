@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+
+  <head>
+    <title>Desafío To Do List</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+    <meta author="Pedro Eduardo Donoso Ramírez">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"/>
+ 
+
+  </head>
+
+  <body>
+
+<div class="container mt-5">
+  <div id="app">
+      <h5>{{tema}}</h5>
+
+        
+<div class="container bg-danger pt-3 pb-3 ">
+
+  <input class="bg-light pl-3" placeholder="Ejemplo: Estudiar Vue" type="text" v-model="misOcupaciones" />
+
+  
+<button class="bg-primary pl-3 pr-3" v-on:click="enlistarLabor"><strong>Añadir a la Lista</strong></button>
+
+</div>
+      
+
+     
+      <div class="container mt-3 pb-3 bg-warning">
+
+        <h5 class="pt-3">Mi Listado de Pendientes:</h5>
+      <ul>
+        <li v-for="ocupacion of ocupaciones">
+          {{ocupacion.hacer}}
+
+          <span v-if="ocupacion.total === 0"> </span>
+        </li>
+      </ul>
+
+      </div>
+      
+      
+
+
+
+    </div>
+</div>
+
+    
+    <!--DEBE IR SOBRE VUE-->
+   
+    <script src="script.js"></script>
+     <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+    
+  </body>
+</html>
